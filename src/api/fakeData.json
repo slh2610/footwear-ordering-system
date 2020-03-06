@@ -1,0 +1,42 @@
+[
+  {
+    "id": "nike1234",
+    "imageUrl": "https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/8/0/804264_01.jpg",
+    "productName": "Nike Air VaporMax Flyknit 3",
+    "category": "Men",
+    "size": 9,
+    "country": "UK",
+    "colour": "Gry/Wht",
+    "status": "Ready to try"
+  },
+  {
+    "id": "adds1234",
+    "imageUrl": "https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/8/0/804264_01.jpg",
+    "productName": "Originals OZWEEGO",
+    "category": "Women",
+    "country": "UK",
+    "size": 4,
+    "colour": "Black",
+    "status": "Out of stock"
+  },
+  {
+    "id": "nik4321",
+    "imageUrl": "https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/8/0/804264_01.jpg",
+    "productName": "Nike Air MAX 95 SE",
+    "category": "Men",
+    "country": "UK",
+    "size": 10,
+    "colour": "Blue",
+    "status": "In the queue"
+  },
+  {
+    "id": "nike3451",
+    "imageUrl": "https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/8/0/804264_01.jpg",
+    "productName": "Nike Air VaporMax 2019",
+    "category": "Junior",
+    "country": "UK",
+    "size": 3,
+    "colour": "Black",
+    "status": "On the way"
+  }
+]
