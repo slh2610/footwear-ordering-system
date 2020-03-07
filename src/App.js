@@ -1,5 +1,5 @@
 import React from 'react';
-import * as api from './api/footwearOrders.js';
+import api from './api/footwearOrders.js';
 import OrderPage from './components/OrderPage';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';

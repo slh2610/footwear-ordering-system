@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import OrderDetails from './OrderDetails';
 
 const OrderDisplay = ({ footWearOrders }) => {
   if (footWearOrders) {
@@ -7,9 +8,15 @@ const OrderDisplay = ({ footWearOrders }) => {
       <div>
         {footWearOrders.map(order => {
           return (
-            <ul key={order.productName}>
-              <li>{order.productName}</li>
-            </ul>
+            <div key={order.id}>
+              <OrderDetails
+                name={order.productName}
+                size={order.size}
+                image={order.imageUrl}
+                category={order.category}
+                status={order.status}
+              />
+            </div>
           );
         })}
       </div>

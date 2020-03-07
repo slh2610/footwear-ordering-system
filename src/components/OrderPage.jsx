@@ -12,7 +12,7 @@ class OrderPage extends React.Component {
   }
 
   componentDidMount() {
-    return this.props.api().then(orders => {
+    return this.props.api.getAllFootwearOrders().then(orders => {
       this.setState({
         footWearOrders: orders
       });
@@ -29,7 +29,9 @@ class OrderPage extends React.Component {
 }
 
 OrderPage.propTypes = {
-  api: PropTypes.func.isRequired
+  api: PropTypes.shape({
+    getAllFootwearOrders: PropTypes.func.isRequired
+  })
 };
 
 export default OrderPage;
