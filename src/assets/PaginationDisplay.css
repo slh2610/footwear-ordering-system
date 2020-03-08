@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  height: 5em;
+}
+
+.active {
+  width: 5%;
+  border-radius: 100%;
+  border-color: white;
+  background-color: white;
+  height: 100%;
+}
+
+.disabled {
+  background-color: black;
+  width: 5%;
+  border-radius: 100%;
+  border-color: white;
+  height: 100%;
+}

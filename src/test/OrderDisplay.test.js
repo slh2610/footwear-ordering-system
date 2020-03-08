@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import OrderDisplay from '../components/OrderDisplay.jsx';
 
-const footWearOrders = [
+const footwearOrders = [
   {
     id: 'nike1234',
     imageUrl:
@@ -18,7 +18,7 @@ const footWearOrders = [
 
 describe('Order Display', () => {
   it('should render order details', () => {
-    const wrapper = shallow(<OrderDisplay footWearOrders={footWearOrders} />);
+    const wrapper = shallow(<OrderDisplay footwearOrders={footwearOrders} />);
 
     expect(wrapper.find('OrderDetails').exists()).toBe(true);
   });

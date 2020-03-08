@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Route path="/orders">
-          <OrderPage api={api} />;
+          <OrderPage api={api} />
         </Route>
       </div>
     </Router>

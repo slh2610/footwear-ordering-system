@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import OrderDisplay from './OrderDisplay';
 import OrderStatusBar from './OrderStatusBar';
+import PaginationDisplay from './PaginationDisplay';
 import '../assets/OrderPage.css';
 
 class OrderPage extends React.Component {
@@ -9,7 +10,7 @@ class OrderPage extends React.Component {
     super(props);
 
     this.state = {
-      footWearOrders: [],
+      footwearOrders: [],
       statusTypes: [
         'All',
         'Ready to try',
@@ -17,37 +18,49 @@ class OrderPage extends React.Component {
         'Out of stock',
         'In the queue'
       ],
-      selectedStatus: ''
+      selectedStatus: 'All',
+      activePage: 1,
+      offset: 4
     };
+
+    this.paginationInterval = this.paginationInterval.bind(this);
   }
 
   componentDidMount() {
-    return this.props.api.getAllFootwearOrders().then(orders => {
-      this.setState({
-        footWearOrders: orders
+    const { offset, selectedStatus } = this.state;
+
+    return this.props.api
+      .getAllfootwearOrders(offset, selectedStatus)
+      .then(footwearOrders => {
+        this.setState({ footwearOrders });
+        this.paginationInterval();
       });
-    });
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.selectedStatus !== prevState.selectedStatus) {
-      return this.props.api.getAllFootwearOrders().then(orders => {
-        const footWearOrders = orders.filter(order => {
-          return this.state.selectedStatus === 'All'
-            ? order
-            : order.status === this.state.selectedStatus;
-        });
-
-        this.setState({ footWearOrders });
-      });
+      return this.props.api
+        .getAllfootwearOrders(4, this.state.selectedStatus)
+        .then(footwearOrders => this.setState({ footwearOrders }));
     }
   }
 
+  paginationInterval() {
+    setInterval(() => {
+      if (this.state.activePage < this.state.footwearOrders.length) {
+        this.setState({
+          activePage: this.state.activePage + 1,
+          offset: this.state.offset + 4
+        });
+        return this.props.api
+          .getAllfootwearOrders(this.state.offset, this.state.selectedStatus)
+          .then(footwearOrders => this.setState({ footwearOrders }));
+      } else this.setState({ activePage: 1, offset: 4 });
+    }, 10000);
+  }
+
   handleStatusClick(status) {
-    const ordersByStatus = this.state.footWearOrders.filter(order => {
-      return status === 'All' ? order : order.status === status;
-    });
-    this.setState({ selectedStatus: status, footWearOrders: ordersByStatus });
+    this.setState({ selectedStatus: status });
   }
 
   render() {
@@ -57,7 +70,11 @@ class OrderPage extends React.Component {
           statusTypes={this.state.statusTypes}
           handleStatusClick={this.handleStatusClick.bind(this)}
         />
-        <OrderDisplay footWearOrders={this.state.footWearOrders} />
+        <OrderDisplay footwearOrders={this.state.footwearOrders} />
+        <PaginationDisplay
+          activePage={this.state.activePage}
+          totalPages={this.state.footwearOrders.length}
+        />
       </div>
     );
   }
@@ -65,7 +82,7 @@ class OrderPage extends React.Component {
 
 OrderPage.propTypes = {
   api: PropTypes.shape({
-    getAllFootwearOrders: PropTypes.func.isRequired
+    getAllfootwearOrders: PropTypes.func.isRequired
   })
 };
 

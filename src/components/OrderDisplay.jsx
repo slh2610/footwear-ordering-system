@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import OrderDetails from './OrderDetails';
 import '../assets/OrderDisplay.css';
 
-const OrderDisplay = ({ footWearOrders }) => {
-  if (footWearOrders) {
+const OrderDisplay = ({ footwearOrders }) => {
+  if (footwearOrders) {
     return (
       <div className="order-display">
-        {footWearOrders.map(order => {
+        {footwearOrders.map(order => {
           return (
             <div key={order.id} className="order-details-container">
               <OrderDetails
@@ -27,7 +27,7 @@ const OrderDisplay = ({ footWearOrders }) => {
 };
 
 OrderDisplay.propTypes = {
-  footWearOrders: PropTypes.array
+  footwearOrders: PropTypes.array
 };
 
 export default OrderDisplay;
