@@ -1,17 +1,25 @@
 .pagination {
-  display: inline-block;
+  display: flex;
+  width: 50%;
+  float: right;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-right: 4em;
 }
 
 .pagination-icons {
-  text-align: center;
+  display: flex;
+  justify-self: center;
+  margin-top: 0;
 }
 
 .active {
-  background-color: white;
+  background-color: green;
 }
 
 .disabled {
-  background-color: black;
+  background-color: lightgray;
 }
 
 .circle {

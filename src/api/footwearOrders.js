@@ -6,8 +6,9 @@ const getAllfootwearOrders = (offset, status) => {
   );
 
   const orderDetails = filteredOrders.slice(offset - 4, offset);
+  const totalPages = Math.ceil(filteredOrders.length / 4);
 
-  return Promise.resolve(orderDetails);
+  return Promise.resolve({ orderDetails, totalPages });
 };
 
 module.exports = { getAllfootwearOrders };

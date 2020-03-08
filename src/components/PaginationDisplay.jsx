@@ -18,7 +18,7 @@ const PaginationDisplay = ({ activePage, totalPages }) => {
           ))}
       </section>
       <p className="page-number">
-        {activePage} | {totalPages}
+        {activePage.toString().padStart(2, '0')} | {totalPages}
       </p>
     </div>
   );
