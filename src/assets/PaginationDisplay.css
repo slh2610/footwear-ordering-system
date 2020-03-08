@@ -1,22 +1,30 @@
 .pagination {
-  display: flex;
-  flex-direction: row;
-  border: 2px solid black;
-  height: 5em;
+  display: inline-block;
+}
+
+.pagination-icons {
+  text-align: center;
 }
 
 .active {
-  width: 5%;
-  border-radius: 100%;
-  border-color: white;
   background-color: white;
-  height: 100%;
 }
 
 .disabled {
   background-color: black;
-  width: 5%;
-  border-radius: 100%;
-  border-color: white;
-  height: 100%;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.page-number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: darkgrey;
+  font-weight: bold;
 }

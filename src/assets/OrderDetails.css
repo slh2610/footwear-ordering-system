@@ -1,38 +1,79 @@
+.order-details-container {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  margin-bottom: 2em;
+}
+
 .order-details {
   width: 100%;
   display: flex;
-  border: 2px solid black;
-  border-radius: 2%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  border: 0.1em solid darkgray;
+  border-left: none;
+  border-radius: 2%;
   height: 120px;
 }
 
 img {
-  width: 10%;
+  height: 70%;
+  border: 0.1em solid darkgray;
+  border-radius: 5%;
+}
+
+.product-name {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  width: 5em;
+}
+
+.details {
+  color: darkgrey;
+  font-size: 20px;
+  font-weight: 500;
+  width: 4em;
+}
+
+.size {
+  width: 3em;
+}
+
+.customer-initials {
+  border: 0.1em solid darkgray;
+  border-radius: 5%;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.status {
+  width: 2%;
+  border-radius: 5%;
   height: 100%;
+  border: 0.1em solid darkgray;
 }
 
 .Out-of-stock {
   background-color: red;
-  width: 5%;
-  height: 100%;
 }
 
 .Ready-to-try {
   background-color: blue;
-  width: 5%;
-  height: 100%;
 }
 
 .In-the-queue {
   background-color: orange;
-  width: 5%;
-  height: 100%;
 }
 
 .On-the-way {
   background-color: green;
-  width: 5%;
-  height: 100%;
 }

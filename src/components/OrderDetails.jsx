@@ -13,14 +13,16 @@ const OrderDetails = ({
   customerInitials
 }) => {
   return (
-    <div className="order-details">
-      <div className={status.replace(/\s/g, '-')}></div>
-      <img src={image} alt={name} />
-      <p className="product-name">{name}</p>
-      <p className="category">{category}</p>
-      <p className="size">{size}</p>
-      <p className="colour">{colour}</p>
-      <div className="customer-initials">{customerInitials}</div>
+    <div className="order-details-container">
+      <div className={`status ${status.replace(/\s/g, '-')}`}></div>
+      <div className="order-details">
+        <img src={image} alt={name} />
+        <h2 className="product-name">{name}</h2>
+        <p className="details category">Category: {category}</p>
+        <p className="details size">Size: {size}</p>
+        <p className="details colour">Colour: {colour}</p>
+        <div className="customer-initials">{customerInitials}</div>
+      </div>
     </div>
   );
 };

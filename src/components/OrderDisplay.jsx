@@ -16,6 +16,7 @@ const OrderDisplay = ({ footwearOrders }) => {
                 image={order.imageUrl}
                 category={order.category}
                 status={order.status}
+                colour={order.colour}
                 customerInitials={order.customerInitials}
               />
             </div>

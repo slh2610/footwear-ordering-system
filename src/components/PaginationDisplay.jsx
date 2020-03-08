@@ -9,14 +9,16 @@ const PaginationDisplay = ({ activePage, totalPages }) => {
         {Array(totalPages)
           .fill(1)
           .map((_, index) => (
-            <div
+            <span
               key={index}
-              className={activePage === index + 1 ? 'active' : 'disabled'}
-            ></div>
+              className={`circle ${
+                activePage === index + 1 ? 'active' : 'disabled'
+              }`}
+            ></span>
           ))}
       </section>
-      <p>
-        {activePage}|{totalPages}
+      <p className="page-number">
+        {activePage} | {totalPages}
       </p>
     </div>
   );

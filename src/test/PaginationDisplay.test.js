@@ -10,9 +10,9 @@ describe('Pagination Display', () => {
   });
 
   it('should set the correct class for the active page', () => {
-    const div = wrapper.find('.pagination-icons').find('div');
-    expect(div.at(0).prop('className')).toEqual('active');
-    expect(div.at(1).prop('className')).toEqual('disabled');
+    const span = wrapper.find('.pagination-icons').find('span');
+    expect(span.at(0).prop('className')).toEqual('active');
+    expect(span.at(1).prop('className')).toEqual('disabled');
   });
 
   it('should show the current and total page numbers', () => {
