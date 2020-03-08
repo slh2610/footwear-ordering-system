@@ -27,9 +27,7 @@ const OrderDisplay = ({ footWearOrders }) => {
 };
 
 OrderDisplay.propTypes = {
-  api: PropTypes.shape({
-    getAllFootwearOrders: PropTypes.func.isRequired
-  })
+  footWearOrders: PropTypes.array
 };
 
 export default OrderDisplay;

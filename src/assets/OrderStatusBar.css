@@ -1,0 +1,10 @@
+.order-status-bar {
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+
+.order-status-item {
+  display: flex;
+  flex-direction: row;
+}

@@ -27,4 +27,11 @@ describe('Order Page', () => {
       expect(wrapper.find('OrderDisplay').exists()).toBe(true);
     });
   });
+
+  it('should render order status links', () => {
+    const wrapper = shallow(<OrderPage api={api} />);
+    return delay(5).then(() => {
+      expect(wrapper.find('OrderStatusBar').exists()).toBe(true);
+    });
+  });
 });
