@@ -33,19 +33,21 @@ describe('Order Page', () => {
     });
   });
 
-  describe.skip('When the user filters the orders by status', () => {
-    it('should pass down the correct props', () => {
-      const wrapper = shallow(<OrderPage api={api} />);
-      wrapper.setState({
-        selectedStatus: 'Ready to try'
-      });
-
-      return delay(5).then(() => {
-        wrapper.update();
-        expect(wrapper.find(OrderDisplay).prop('footwearOrders')).toHaveLength(
-          4
-        );
-      });
+  it('should pass down the correct props', () => {
+    const wrapper = shallow(<OrderPage api={api} />);
+    wrapper.setState({
+      selectedStatus: 'Ready to try',
+      activePage: 1,
+      loading: false
     });
+
+    return delay(5).then(() => {
+      wrapper.update();
+      expect(wrapper.find('OrderDisplay').prop('footwearOrders')).toEqual(4);
+    });
+  });
+
+  describe('Pagination', () => {
+    it('should ');
   });
 });

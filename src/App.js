@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route path="/orders">
+        <Route path="/*">
           <OrderPage api={api} />
         </Route>
       </div>

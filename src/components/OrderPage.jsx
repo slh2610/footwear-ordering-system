@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import OrderDisplay from './OrderDisplay';
 import OrderStatusBar from './OrderStatusBar';
 import PaginationDisplay from './PaginationDisplay';
-import { css } from '@emotion/core';
 import ClipLoader from 'react-spinners/ClipLoader';
 import '../assets/OrderPage.css';
 
