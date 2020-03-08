@@ -12,8 +12,10 @@ const OrderStatusBar = ({ statusTypes, handleStatusClick }) => {
             className="status-item"
             onClick={() => handleStatusClick(status)}
           >
-            <div className={`status-type ${status.replace(/\s/g, '-')}`}></div>
-            <p>{status}</p>
+            <span
+              className={`status-type ${status.replace(/\s/g, '-')}`}
+            ></span>
+            <p className="order-status">{status}</p>
           </nav>
         );
       })}

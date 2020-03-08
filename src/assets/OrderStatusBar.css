@@ -2,9 +2,30 @@
   float: right;
   display: flex;
   flex-direction: row;
+  margin-bottom: 2em;
+  margin-right: 4em;
 }
 
-.order-status-item {
+.status-item {
   display: flex;
   flex-direction: row;
+  margin-left: 2em;
+}
+
+.order-status {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: darkgray;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.status-type {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  margin: 0.5em;
+  display: inline-block;
 }
