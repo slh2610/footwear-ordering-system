@@ -4,4 +4,4 @@ const getAllFootwearOrders = () => {
   return Promise.resolve(orderData);
 };
 
-module.exports = getAllFootwearOrders;
+module.exports = { getAllFootwearOrders };

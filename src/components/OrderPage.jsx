@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OrderDisplay from './OrderDisplay';
+import '../assets/OrderPage.css';
 
 class OrderPage extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class OrderPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="order-page">
         <OrderDisplay footWearOrders={this.state.footWearOrders} />
       </div>
     );

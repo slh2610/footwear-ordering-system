@@ -1,0 +1,38 @@
+.order-details {
+  width: 100%;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 2%;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+}
+
+img {
+  width: 10%;
+  height: 100%;
+}
+
+.Out-of-stock {
+  background-color: red;
+  width: 5%;
+  height: 100%;
+}
+
+.Ready-to-try {
+  background-color: blue;
+  width: 5%;
+  height: 100%;
+}
+
+.In-the-queue {
+  background-color: orange;
+  width: 5%;
+  height: 100%;
+}
+
+.On-the-way {
+  background-color: green;
+  width: 5%;
+  height: 100%;
+}
