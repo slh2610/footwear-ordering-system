@@ -9,7 +9,9 @@ describe('Order Page', () => {
   const api = {
     getAllfootwearOrders: jest
       .fn()
-      .mockReturnValue(Promise.resolve(fakeOrderDetails))
+      .mockReturnValue(
+        Promise.resolve({ orderDetails: fakeOrderDetails, totalPages: 6 })
+      )
   };
 
   it('should render order details', () => {
@@ -31,23 +33,5 @@ describe('Order Page', () => {
     return delay(1).then(() => {
       expect(wrapper.find('PaginationDisplay').exists()).toBe(true);
     });
-  });
-
-  it('should pass down the correct props', () => {
-    const wrapper = shallow(<OrderPage api={api} />);
-    wrapper.setState({
-      selectedStatus: 'Ready to try',
-      activePage: 1,
-      loading: false
-    });
-
-    return delay(5).then(() => {
-      wrapper.update();
-      expect(wrapper.find('OrderDisplay').prop('footwearOrders')).toEqual(4);
-    });
-  });
-
-  describe('Pagination', () => {
-    it('should ');
   });
 });

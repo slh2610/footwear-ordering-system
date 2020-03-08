@@ -24,7 +24,7 @@ describe('Order Details', () => {
         .find('div')
         .at(1)
         .prop('className')
-    ).toBe('Ready-to-try');
+    ).toBe('status Ready-to-try');
   });
 
   it('should render an image', () => {
@@ -40,15 +40,15 @@ describe('Order Details', () => {
   });
 
   it('should render a shoe size', () => {
-    expect(wrapper.find('.size').text()).toEqual('UK 9');
+    expect(wrapper.find('.size').text()).toEqual('Size: UK 9');
   });
 
   it('should render a colour', () => {
-    expect(wrapper.find('.colour').text()).toEqual('Gry/Wht');
+    expect(wrapper.find('.colour').text()).toEqual('Colour: Gry/Wht');
   });
 
   it('should render a category', () => {
-    expect(wrapper.find('.category').text()).toEqual('Men');
+    expect(wrapper.find('.category').text()).toEqual('Category: Men');
   });
 
   it('should render the customer initials', () => {

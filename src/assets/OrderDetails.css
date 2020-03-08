@@ -23,6 +23,7 @@ img {
   height: 70%;
   border: 0.1em solid darkgray;
   border-radius: 5%;
+  width: 8em;
 }
 
 .product-name {
@@ -30,6 +31,7 @@ img {
   font-size: 24px;
   font-weight: 500;
   width: 5em;
+  margin-left: 0;
 }
 
 .details {
@@ -65,11 +67,11 @@ img {
 }
 
 .Out-of-stock {
-  background-color: red;
+  background-color: lightsalmon;
 }
 
 .Ready-to-try {
-  background-color: blue;
+  background-color: lightblue;
 }
 
 .In-the-queue {
